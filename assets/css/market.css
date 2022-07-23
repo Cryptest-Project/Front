@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    color: white;
+    text-decoration: none;
+}
+body{
+    background: #18232F;
+}
+.hr_sep_home{
+    width: 150vh;
+    margin-right: 10vh;
+    border: 3px solid #1F2C3A;
+}
+.sep_vue{
+    display: block;
+    height: 60px;
+}
+nav{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: #141C26;
+}
+.nav_none{
+    opacity: 0;
+    transition: all 1s;
+}
+.info_user{
+    display: flex;
+    width: 100%;
+}
+.info_user div{
+    display: flex;
+    width: 100%;
+    margin: auto;
+}
+.info_user .name{
+    margin-left: auto;
+    margin-right: 2.5vh;
+}
+.info_user details{
+    position: absolute; 
+    padding: 0vh 3vh 1.5vh 4vh;
+    cursor: pointer;
+    background-color: #141C26;
+    border-radius: 0vh 0vh 2vh 0vh;
+}
+.info_user details p{
+    margin: 2vh 1.5vh;
+}
+.logo_nav{
+    width: 200px;
+    height: 40px;
+    margin: 0 auto ;
+    margin-top: 5vh;
+}
+.bottom_nav{
+    margin-top: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.links_nav{
+    margin-top: 12.5vh;
+    width: 100%;
+}
+.link_page{
+    display: flex;
+    padding: 1vh 0;
+    padding-top: 2vh;
+    border-bottom: 2px solid;
+    border-color: #576B86;
+}
+.log{
+    border-bottom: none;
+    border-top: 2px solid;
+    padding: 2vh 0;
+    border-color: #576B86;
+    padding-top: 1.5vh;
+}
+.link_page:hover{
+    background-color: #202d3b;
+}
+.link_page img{
+    width: 30px;
+    height: 30px;
+    margin-left: 2vh;
+}
+.link_page p{
+    margin-left: 2vh;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.real_nav_div{
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+
+    width: 70px;
+    height: 100vh;
+    transition: all 1s;
+    
+    background: #263444;
+}
+.real_nav_div:hover{
+    width: 275px;
+}
+.real_nav_div:hover .nav_none{
+    opacity: 1;
+}
+
+/*----------------------------------
+    FOOTER
+-----------------------------------*/
+.div_flex{
+    display: flex;
+    margin-top: 30vh;
+}
+.div_flex div{
+    margin: auto;
+    height: 300px;
+}
+.div_flex div p{
+    color: #89A9CC;
+    margin: 1.5vh 0;
+}
+.hr_n2{
+    display: block;
+    width: 75%;
+    border: 1px solid #435A74;
+    margin: 5vh 0;
+}
+.bottom_footer_text{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vh;
+}
