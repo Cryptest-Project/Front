@@ -239,6 +239,9 @@ main.active .circle {
   right: calc(50% - var(--circle-space));
 }
 @media screen and (max-width: 750px) {
+  main .container {
+    overflow: hidden;
+  }
   main .container > div {
     flex-direction: column-reverse !important;
   }

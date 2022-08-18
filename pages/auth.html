@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <title>CircleSlidingForm</title>
+    <title>Auth</title>
     
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -86,5 +86,9 @@
 
         <div class="circle"></div>
     </main>
+
+    <script type="text/javascript">
+        if("register"===window.location.href.split('#')[1])window.document.querySelector('main').classList.add('active');setTimeout(() => setInterval(() => window.history.pushState({foo:'bar'},'URL',window.document.querySelector('main').classList.contains('active')?'#register':'#login'),500),500);
+    </script>
 </body>
 </html>
