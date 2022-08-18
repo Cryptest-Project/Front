@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+* {
+  box-sizing: border-box;
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+:root {
+  --primary-color: #1190cb;
+  --secondary-color: #1c2836;
+  --backdrop-color: #18232f;
+}
+
+body, main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  --circle-space: 3em;
+  background: var(--backdrop-color);
+}
+main .container {
+  height: 100%;
+}
+main .container > div {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+main .container > div > div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  z-index: 2;
+}
+main .container > div > div.form {
+  transition: 0.7s ease;
+  width: calc(50% + var(--circle-space));
+}
+main .container > div > div.form .inputs {
+  display: flex;
+  flex-direction: column;
+  margin: min(5em, 10vh) 0;
+}
+main .container > div > div.form .inputs input {
+  border: none;
+  border-bottom: 3px solid #4c5e6f;
+  background: unset;
+  padding: 4px 8px;
+  margin: 6px;
+  font-weight: 300;
+  color: #6f91b6;
+  font-size: 1.1rem;
+  outline: none;
+  transition: all 350ms;
+  width: 270px;
+}
+main .container > div > div.form .inputs input::-moz-placeholder {
+  color: #4c5e6f;
+}
+main .container > div > div.form .inputs input:-ms-input-placeholder {
+  color: #4c5e6f;
+}
+main .container > div > div.form .inputs input::placeholder {
+  color: #4c5e6f;
+}
+main .container > div > div.form .inputs input:focus, main .container > div > div.form .inputs input:target, main .container > div > div.form .inputs input:hover {
+  border-bottom-color: #6f91b6;
+}
+main .container > div > div.form .inputs input[type=date]::-webkit-calendar-picker-indicator {
+  filter: invert(53%) sepia(26%) saturate(543%) hue-rotate(171deg) brightness(100%) contrast(87%);
+}
+main .container > div > div.form .buttons button[type=submit] {
+  color: #fff;
+  background: var(--primary-color);
+  padding: 6px 0;
+  width: 250px;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.4s;
+}
+main .container > div > div.form .buttons button[type=submit]:hover, main .container > div > div.form .buttons button[type=submit]:focus {
+  opacity: 0.8;
+}
+main .container > div > div.form .buttons .other-choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3px;
+}
+main .container > div > div.form .buttons .other-choice span {
+  color: rgba(238, 238, 238, 0.9333333333);
+  font-size: 0.9rem;
+}
+main .container > div > div.form .buttons .other-choice a {
+  position: relative;
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+  outline: none;
+}
+main .container > div > div.form .buttons .other-choice a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: var(--primary-color);
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: all 0.3s;
+}
+main .container > div > div.form .buttons .other-choice a:focus, main .container > div > div.form .buttons .other-choice a:hover {
+  opacity: 85%;
+}
+main .container > div > div.form .buttons .other-choice a:focus::after, main .container > div > div.form .buttons .other-choice a:hover::after {
+  opacity: 1;
+}
+main .container > div > div.alternative {
+  height: calc(90% - var(--circle-space));
+  width: calc(45% - var(--circle-space));
+}
+main .container > div > div.alternative h3 {
+  color: #ddd;
+  font-weight: 600;
+}
+main .container > div > div.alternative p {
+  color: #ddd;
+  font-weight: 300;
+  text-align: center;
+  margin: 5px 0;
+}
+main .container > div > div.alternative button {
+  color: #fff;
+  background: none;
+  padding: 6px 0;
+  width: 250px;
+  font-size: 1.2rem;
+  border: 3px solid var(--primary-color);
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.4s;
+  margin: 10px;
+}
+main .container > div > div.alternative button:hover, main .container > div > div.alternative button:focus {
+  opacity: 0.8;
+}
+main .container > div.login {
+  z-index: initial;
+}
+main .container > div.login > div {
+  opacity: 1;
+}
+main .container > div.login > div.form {
+  left: 0;
+}
+main .container > div.login > div.alternative {
+  transition: 0.5s ease 350ms;
+  right: 0;
+  visibility: visible;
+  opacity: 1;
+}
+main .container > div.register {
+  z-index: -1;
+  flex-direction: row-reverse;
+}
+main .container > div.register > div {
+  opacity: 0;
+}
+main .container > div.register > div.form {
+  left: -all 0.7s;
+}
+main .container > div.register > div.form .inputs {
+  margin: min(2.5em, 5vh);
+}
+main .container > div.register > div.alternative {
+  transition: 0.5s ease;
+  left: 6%;
+  visibility: hidden;
+  opacity: 0;
+}
+main .circle {
+  display: block;
+  position: fixed;
+  background: var(--secondary-color);
+  top: -100%;
+  right: calc(-50% + var(--circle-space));
+  width: calc(200vh - var(--circle-space));
+  height: calc(200vh - var(--circle-space));
+  transition: all 0.7s;
+  border-radius: 50%;
+  z-index: 1;
+  border: 1px solid rgba(17, 144, 203, 0.0666666667);
+  box-shadow: -10px 10px 80px 10px rgba(28, 40, 54, 0.2), -10px 10px 30px -5px rgba(17, 17, 34, 0.1607843137);
+}
+main.active .container > div.login {
+  z-index: -1;
+}
+main.active .container > div.login > div {
+  opacity: 0;
+}
+main.active .container > div.login > div.alternative {
+  transition: 0.5s ease;
+  right: 6%;
+  visibility: hidden;
+}
+main.active .container > div.register {
+  z-index: initial;
+}
+main.active .container > div.register > div {
+  opacity: 1;
+}
+main.active .container > div.register > div.alternative {
+  transition: 0.5s ease 350ms;
+  left: initial;
+  visibility: visible;
+}
+main.active .circle {
+  right: calc(50% - var(--circle-space));
+}
+@media screen and (max-width: 750px) {
+  main .container {
+    overflow: hidden;
+  }
+  main .container > div {
+    flex-direction: column-reverse !important;
+  }
+  main .container > div > div {
+    width: 100% !important;
+  }
+  main .container > div > div.form {
+    height: calc(100% - 5em);
+  }
+  main .container > div > div.alternative {
+    height: 7.5em;
+  }
+  main .container > div.register {
+    flex-direction: column !important;
+  }
+  main .circle {
+    top: calc(-200vh + 10em);
+    left: -100vh;
+    transform: translateX(57.5vw);
+  }
+  main.active .circle {
+    top: calc(100vh - 10em);
+  }
+}/*# sourceMappingURL=auth.css.map */

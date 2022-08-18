@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Auth</title>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../assets/css/auth.css">
+
+</head>
+<body>
+    <main role="main">
+        <div class="container">
+            <div class="login">
+                <div class="form">
+                    <img src="../assets/images/logo.png" alt="Logo" class="logo">
+
+                    <div class="inputs">
+                        <input type="text" name="l-email" placeholder="Email">
+                        <input type="password" name="l-password" placeholder="Password">
+                    </div>
+
+                    <div class="buttons">
+                        <button type="submit">Login</button>
+
+                        <div class="other-choice">
+                            <span>or</span>
+                            <a href="#">Connect with Cod'ons</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alternative">
+                    <h3>Register</h3>
+
+                    <p>
+                        Don't have an account yet ?
+                        <br><i>Register now !</i>
+                    </p>
+
+                    <button type="button" onclick="document.querySelector('main').classList.add('active')">
+                        Register
+                    </button>
+                </div>
+            </div>
+
+            <div class="register">
+                <div class="form">
+                    <img src="../assets/images/logo.png" alt="Logo" class="logo">
+
+                    <div class="inputs">
+                        <div class="inputs">
+                            <input type="text" name="r-username" placeholder="Username">
+                            <input type="email" name="r-email" placeholder="Email">
+                            <input type="date" name="r-birth" placeholder="Birth">
+                            <input type="password" name="r-password-a" placeholder="Password">
+                            <input type="password" name="r-password-b" placeholder="Confirm password">
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <button type="submit">Register</button>
+
+                        <div class="other-choice">
+                            <span>or</span>
+                            <a href="#">Connect with Cod'ons</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alternative">
+                    <h3>Login</h3>
+
+                    <p>
+                        Have an account yet ?
+                        <br><i>Sign in !</i>
+                    </p>
+
+                    <button type="button" onclick="document.querySelector('main').classList.remove('active')">Login</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="circle"></div>
+    </main>
+
+    <script type="text/javascript">
+        if("register"===window.location.href.split('#')[1])window.document.querySelector('main').classList.add('active');setTimeout(() => setInterval(() => window.history.pushState({foo:'bar'},'URL',window.document.querySelector('main').classList.contains('active')?'#register':'#login'),500),500);
+    </script>
+</body>
+</html>
